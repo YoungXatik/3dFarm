@@ -6,10 +6,13 @@ using UnityEngine;
 public class PlayerTools : MonoBehaviour
 {
     public static PlayerTools Instance;
+    private PlayerScores _playerScores;
+    [SerializeField] private CameraMovement _cameraMovement;
 
     private void Awake()
     {
         Instance = this;
+        _playerScores = GetComponent<PlayerScores>();
     }
 
     [SerializeField] private GameObject playerToolsMenu;
@@ -27,7 +30,14 @@ public class PlayerTools : MonoBehaviour
         playerToolsMenu.SetActive(true);
         if (currentPickedPlace.isPlantCompletlyGrowed)
         {
-            playerToolsTakePlantButton.SetActive(true);
+            if (currentPickedPlace.currentPlacePlant == PlantsDataBase.Instance.tree)
+            {
+                playerToolsTakePlantButton.SetActive(false);
+            }
+            else
+            {
+                playerToolsTakePlantButton.SetActive(true);
+            }
         }
         else
         {
@@ -63,9 +73,27 @@ public class PlayerTools : MonoBehaviour
 
     public void TakePlant()
     {
+        StartCoroutine(TakePlantCoroutine());
+    }
+
+    private IEnumerator TakePlantCoroutine()
+    {
         if (currentPickedPlace.isPlantCompletlyGrowed)
         {
+            if (currentPickedPlace.currentPlacePlant == PlantsDataBase.Instance.carrot)
+            {
+                _playerScores.AddCarrots(1);
+                _playerScores.AddExperience(currentPickedPlace.currentPlacePlant.expReward);
+            }
+            else if(currentPickedPlace.currentPlacePlant == PlantsDataBase.Instance.grass)
+            {
+                _playerScores.AddExperience(currentPickedPlace.currentPlacePlant.expReward);
+            }
+            _cameraMovement.ChangeCameraPositionToPlant(currentPickedPlace.transform.position);
+            yield return new WaitForSeconds(_cameraMovement.timeToChangeCameraPosition + 0.1f);
             currentPickedPlace.OnPlantTake();
+            yield return new WaitForSeconds(0.5f);
+            _cameraMovement.ReturnCameraPositionToDefault();
             HidePlayerTools();
         }
     }

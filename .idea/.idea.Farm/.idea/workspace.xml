@@ -13,15 +13,22 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Place/PlaceComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerTools.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/CameraMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerScores.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Data/PlantData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../MonsterCarCrashClone/Assets/Scripts/Finish/FinishPoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Plants/PlantsDataBase.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Ground/GroundController.cs" />
         <option value="$PROJECT_DIR$/Assets/Data/PlantData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTools.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Plants/PlantsDataBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Place/PlaceComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerScores.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/CameraMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTools.cs" />
       </list>
     </option>
   </component>
@@ -63,7 +70,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668705920166</updated>
-      <workItem from="1668705923479" duration="7314000" />
+      <workItem from="1668705923479" duration="7620000" />
+      <workItem from="1668728543752" duration="3990000" />
     </task>
     <servers />
   </component>

@@ -67,7 +67,14 @@ public class PlaceComponent : MonoBehaviour, IPointerClickHandler
         isPlantCompletlyGrowed = true;
         if (PlayerTools.Instance.currentPickedPlace == this)
         {
-            PlayerTools.Instance.ShowPlayerTools();
+            if (currentPlacePlant == PlantsDataBase.Instance.tree)
+            {
+                return;
+            }
+            else
+            {
+                PlayerTools.Instance.ShowPlayerTools();   
+            }
         }
         Debug.Log("Finished!");
     }

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantName: "\u0422\u0440\u0430\u0432\u0430"
   growTime: 7
-  expReward: 1
+  expReward: 6
   plantObject: {fileID: 4371825788281718228, guid: 7633a5886c1af514d87aeb8bca78199c, type: 3}

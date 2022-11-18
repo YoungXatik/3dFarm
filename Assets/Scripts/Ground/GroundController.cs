@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GroundController : MonoBehaviour
 {
+    private NavMeshSurface _navMeshSurface;
+
     [SerializeField] private GameObject groundObjectPrefab;
     
     [SerializeField] private int sizeX, sizeY;
@@ -12,6 +15,7 @@ public class GroundController : MonoBehaviour
 
     private void Start()
     {
+        _navMeshSurface = GetComponent<NavMeshSurface>();
         StartCoroutine(SpawnGrounds());
     }
     
@@ -27,5 +31,6 @@ public class GroundController : MonoBehaviour
                 yield return new WaitForSeconds(delay);
             }
         }  
+        _navMeshSurface.BuildNavMesh();
     }
 }

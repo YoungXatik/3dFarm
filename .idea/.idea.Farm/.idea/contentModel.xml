@@ -8,6 +8,18 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Assets" t="Include">
+          <e p="Downtown Game Studio" t="Include">
+            <e p="HYPERCASUAL - Simple Female &amp; Male Characters" t="Include">
+              <e p="Documentation.txt" t="Include" />
+            </e>
+          </e>
+          <e p="HONETi" t="Include">
+            <e p="mobile_cartoon_GUI" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="switch_scenes.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="LowpolyVegetationPackFree" t="Include">
             <e p="Readme.txt" t="Include" />
           </e>
@@ -26,6 +38,24 @@
         </e>
         <e p="Data" t="Include">
           <e p="PlantData.cs" t="Include" />
+        </e>
+        <e p="NavMeshComponents" t="Include">
+          <e p="Editor" t="Include">
+            <e p="NavMeshAssetManager.cs" t="Include" />
+            <e p="NavMeshComponentsEditor.asmdef" t="Include" />
+            <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+            <e p="NavMeshLinkEditor.cs" t="Include" />
+            <e p="NavMeshModifierEditor.cs" t="Include" />
+            <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+            <e p="NavMeshSurfaceEditor.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="NavMeshComponents.asmdef" t="Include" />
+            <e p="NavMeshLink.cs" t="Include" />
+            <e p="NavMeshModifier.cs" t="Include" />
+            <e p="NavMeshModifierVolume.cs" t="Include" />
+            <e p="NavMeshSurface.cs" t="Include" />
+          </e>
         </e>
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
@@ -56,6 +86,8 @@
           </e>
           <e p="Player" t="Include">
             <e p="CameraMovement.cs" t="Include" />
+            <e p="ItemsAnimationEvents.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerScores.cs" t="Include" />
             <e p="PlayerTools.cs" t="Include" />
           </e>
@@ -137,6 +169,8 @@
         </e>
       </e>
       <e p="Farm.sln" t="IncludeFlat" />
+      <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />

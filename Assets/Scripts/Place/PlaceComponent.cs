@@ -3,15 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlaceComponent : MonoBehaviour, IPointerClickHandler
 {
     private Outline _outline;
+    [SerializeField] private NavMeshObstacle _navMeshObstacle;
 
     public bool isPlanted;
     public bool isPlantCompletlyGrowed;
+    public bool canClick = true;
     public PlantData currentPlacePlant;
 
     public GameObject currentPlacedPlantObject;
@@ -23,14 +26,31 @@ public class PlaceComponent : MonoBehaviour, IPointerClickHandler
     private void Start()
     {
         _outline = GetComponentInChildren<Outline>();
+        _navMeshObstacle = GetComponent<NavMeshObstacle>();
         fillImageBg.SetActive(false);
     }
 
     public void ThisPlaceClicked()
     {
-        PlayerTools.Instance.currentPickedPlace = this;
-        PlayerTools.Instance.ShowPlayerTools();
-        _outline.enabled = true;
+        if (PlayerTools.Instance.playerMovement.canMove)
+        {
+            if (canClick)
+            {
+                PlayerTools.Instance.currentPickedPlace = this;
+                PlayerTools.Instance.ShowPlayerTools();
+                _outline.enabled = true;
+                PlayerTools.Instance.playerMovement.currentClickedPoint = transform.position;
+                PlayerTools.Instance.playerMovement.MovePlayerToPoint(transform.position);
+            }
+            else
+            {
+                return;
+            }
+        }
+        else
+        {
+            return;
+        }
     }
 
     public void ThisPlaceUnClicked()
@@ -59,6 +79,7 @@ public class PlaceComponent : MonoBehaviour, IPointerClickHandler
             fillImageBg.SetActive(true);
             fillImageBg.transform.DOScale(1, 1).From(0);
             DOTween.To(x => fillImage.fillAmount = x, 0, 1, currentPlacePlant.growTime).OnComplete(OnPlantFinishGrowing);
+            canClick = false;
         }
     }
 
@@ -75,6 +96,16 @@ public class PlaceComponent : MonoBehaviour, IPointerClickHandler
             {
                 PlayerTools.Instance.ShowPlayerTools();   
             }
+        }
+
+        if (currentPlacePlant == PlantsDataBase.Instance.tree)
+        {
+            canClick = false;
+            _navMeshObstacle.enabled = true;
+        }
+        else
+        {
+            canClick = true;
         }
         Debug.Log("Finished!");
     }

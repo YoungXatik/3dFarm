@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerTools : MonoBehaviour
@@ -134,9 +135,11 @@ public class PlayerTools : MonoBehaviour
             _cameraMovement.ChangeCameraPositionToPlant(currentPickedPlace.transform.position);
             yield return new WaitForSeconds(_cameraMovement.timeToChangeCameraPosition + 0.1f);
             currentPickedPlace.OnPlantTake();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(_cameraMovement.timeToChangeCameraPosition * 2);
             _cameraMovement.ReturnCameraPositionToDefault();
             HidePlayerTools();
+            yield return new WaitForSeconds(_cameraMovement.timeToChangeCameraPosition);
+            _cameraMovement.GiveCameraPlayerObjectToFollow();
         }
     }
 }

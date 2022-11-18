@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Carrot
   m_EditorClassIdentifier: 
   plantName: "\u041C\u043E\u0440\u043A\u043E\u0432\u043A\u0430"
-  growTime: 5
+  growTime: 6
   expReward: 10
   plantObject: {fileID: 4244317702930531170, guid: 3d0ed43ea6329fd40b8097b566bd0c6f, type: 3}

@@ -87,6 +87,9 @@
             <e p="PlayerScores.cs" t="Include" />
             <e p="PlayerTools.cs" t="Include" />
           </e>
+          <e p="Shop" t="Include">
+            <e p="Shop.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">

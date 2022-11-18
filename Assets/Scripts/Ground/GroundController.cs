@@ -9,6 +9,8 @@ public class GroundController : MonoBehaviour
     private NavMeshSurface _navMeshSurface;
 
     [SerializeField] private GameObject groundObjectPrefab;
+
+    [SerializeField] private GameObject leftSide,rightSide,downSide,topSide;
     
     [SerializeField] private int sizeX, sizeY;
     [SerializeField] private float delay;
@@ -16,11 +18,13 @@ public class GroundController : MonoBehaviour
     private void Start()
     {
         _navMeshSurface = GetComponent<NavMeshSurface>();
-        StartCoroutine(SpawnGrounds());
+        SpawnGrounds();
+        GenerateSideGround();
+        
     }
     
     
-    private IEnumerator SpawnGrounds()
+    private void SpawnGrounds()
     {
         for (int i = 0; i < sizeX; i++)
         {
@@ -28,9 +32,27 @@ public class GroundController : MonoBehaviour
             {
                 var clone = Instantiate(groundObjectPrefab,gameObject.transform);
                 clone.transform.position = new Vector3(i,0,j);
-                yield return new WaitForSeconds(delay);
             }
         }  
         _navMeshSurface.BuildNavMesh();
+    }
+
+    private void GenerateSideGround()
+    {
+        for (int i = 0; i < sizeY; i++)
+        {
+            var cloneLeftPart = Instantiate(leftSide,gameObject.transform);
+            cloneLeftPart.transform.position = new Vector3(-1f,0,i);
+            var cloneRightPart = Instantiate(rightSide, gameObject.transform);
+            cloneRightPart.transform.position = new Vector3(sizeX,0,i);
+        }
+
+        for (int i = 0; i < sizeX + 20; i++)
+        {
+            var cloneTopSide = Instantiate(topSide, gameObject.transform);
+            cloneTopSide.transform.position = new Vector3(-10 + i,0,sizeY - 1); 
+            var cloneDownSide = Instantiate(downSide, gameObject.transform);
+            cloneDownSide.transform.position = new Vector3(-10 + i,0,0);
+        }
     }
 }

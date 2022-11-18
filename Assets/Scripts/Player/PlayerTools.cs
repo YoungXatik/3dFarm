@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerTools : MonoBehaviour
 {
     public static PlayerTools Instance;
-    private PlayerScores _playerScores;
+    [SerializeField] private PlayerScores _playerScores;
     [SerializeField] private CameraMovement _cameraMovement;
     public PlayerMovement playerMovement;
     [SerializeField] private ItemsAnimationEvents _itemsAnimationEvents;
@@ -14,7 +14,6 @@ public class PlayerTools : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        _playerScores = GetComponent<PlayerScores>();
         playerMovement = GetComponent<PlayerMovement>();
     }
 
@@ -26,6 +25,7 @@ public class PlayerTools : MonoBehaviour
     [Header("Particles")]
     [SerializeField] private GameObject plantParticle;
     [SerializeField] private GameObject takePlantParticle;
+    [SerializeField] private GameObject experiencePopup, carrotPopup;
 
     private void Start()
     {
@@ -87,7 +87,7 @@ public class PlayerTools : MonoBehaviour
                 {
                     _itemsAnimationEvents.currentPlantingObject = _itemsAnimationEvents.plantTree;
                 }
-                Instantiate(plantParticle, new Vector3(transform.position.x,1.5f,transform.position.z), Quaternion.identity);
+                PlantAnimation();
                 HidePlayerTools();
             }
         }
@@ -98,7 +98,21 @@ public class PlayerTools : MonoBehaviour
         StartCoroutine(TakePlantCoroutine());
         playerToolsMenu.SetActive(false);
         playerToolsTakePlantButton.SetActive(false);
+        TakePlantAnimation();
+    }
+
+    private void TakePlantAnimation()
+    {
         Instantiate(takePlantParticle, new Vector3(transform.position.x,1.5f,transform.position.z), Quaternion.identity);
+        var popupExp = Instantiate(experiencePopup);
+        Destroy(popupExp,1f);
+        var popupCarrot = Instantiate(carrotPopup);
+        Destroy(popupCarrot,1);
+    }
+
+    private void PlantAnimation()
+    {
+        Instantiate(plantParticle, new Vector3(transform.position.x,1.5f,transform.position.z), Quaternion.identity);
     }
 
     private IEnumerator TakePlantCoroutine()

@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 66152110}
   - component: {fileID: 66152109}
   - component: {fileID: 66152112}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -200, y: -389.99997}
+  m_AnchoredPosition: {x: -200, y: -421.72064}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66152109
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 68402755}
   - component: {fileID: 68402757}
   - component: {fileID: 68402756}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: DEsc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 204660995}
   - component: {fileID: 204660997}
   - component: {fileID: 204660996}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: PlayerScoresBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -1100, y: 399.99997}
+  m_AnchoredPosition: {x: -1100, y: 350}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &204660996
@@ -985,7 +985,7 @@ GameObject:
   - component: {fileID: 214892167}
   - component: {fileID: 214892169}
   - component: {fileID: 214892168}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Experience
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 318841796}
   - component: {fileID: 318841795}
   - component: {fileID: 318841798}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1327,7 +1327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -50, y: -389.99997}
+  m_AnchoredPosition: {x: -50, y: -421.72064}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &318841795
@@ -1449,7 +1449,7 @@ GameObject:
   - component: {fileID: 332965119}
   - component: {fileID: 332965118}
   - component: {fileID: 332965121}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: ShopBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,7 +1568,7 @@ GameObject:
   - component: {fileID: 335244362}
   - component: {fileID: 335244363}
   - component: {fileID: 335244364}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: CountOfCarrots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1702,7 +1702,7 @@ GameObject:
   - component: {fileID: 335623983}
   - component: {fileID: 335623985}
   - component: {fileID: 335623984}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1825,7 +1825,7 @@ GameObject:
   - component: {fileID: 353960282}
   - component: {fileID: 353960284}
   - component: {fileID: 353960283}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: CountOfMOney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2017,7 +2017,7 @@ GameObject:
   - component: {fileID: 501846457}
   - component: {fileID: 501846459}
   - component: {fileID: 501846458}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2126,7 +2126,7 @@ GameObject:
   - component: {fileID: 534467204}
   - component: {fileID: 534467206}
   - component: {fileID: 534467205}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2347,7 +2347,7 @@ GameObject:
   - component: {fileID: 629731181}
   - component: {fileID: 629731180}
   - component: {fileID: 629731183}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2371,7 +2371,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 100, y: -389.99997}
+  m_AnchoredPosition: {x: 100, y: -421.72064}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &629731180
@@ -2586,7 +2586,7 @@ GameObject:
   - component: {fileID: 716973978}
   - component: {fileID: 716973977}
   - component: {fileID: 716973980}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2610,7 +2610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 400, y: -389.99997}
+  m_AnchoredPosition: {x: 400, y: -378.98944}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &716973977
@@ -2730,7 +2730,7 @@ GameObject:
   - component: {fileID: 724939553}
   - component: {fileID: 724939552}
   - component: {fileID: 724939551}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Experience
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2864,7 +2864,7 @@ GameObject:
   - component: {fileID: 742557007}
   - component: {fileID: 742557009}
   - component: {fileID: 742557008}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3813,7 +3813,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.24944355, y: -0.560505, z: 0.1819444, w: 0.7684455}
+  m_LocalRotation: {x: 0.24944356, y: -0.56050503, z: 0.18194443, w: 0.76844543}
   m_LocalPosition: {x: 5.6986694, y: 4.3429933, z: -1.8280945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3914,7 +3914,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993274851}
-  m_LocalRotation: {x: 0.24944355, y: -0.560505, z: 0.1819444, w: 0.7684455}
+  m_LocalRotation: {x: 0.24944356, y: -0.56050503, z: 0.18194443, w: 0.76844543}
   m_LocalPosition: {x: 5.6986694, y: 4.442993, z: -1.8280945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3970,7 +3970,7 @@ GameObject:
   - component: {fileID: 1001474650}
   - component: {fileID: 1001474649}
   - component: {fileID: 1001474652}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Cancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3994,7 +3994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 250, y: -389.99997}
+  m_AnchoredPosition: {x: 250, y: -421.72064}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1001474649
@@ -4395,7 +4395,7 @@ GameObject:
   - component: {fileID: 1078625421}
   - component: {fileID: 1078625422}
   - component: {fileID: 1078625423}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Scores
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4553,7 +4553,7 @@ GameObject:
   - component: {fileID: 1179497574}
   - component: {fileID: 1179497576}
   - component: {fileID: 1179497575}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4630,7 +4630,7 @@ GameObject:
   - component: {fileID: 1187717942}
   - component: {fileID: 1187717941}
   - component: {fileID: 1187717944}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Sell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4774,7 +4774,7 @@ GameObject:
   - component: {fileID: 1193222159}
   - component: {fileID: 1193222161}
   - component: {fileID: 1193222160}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Money
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5082,7 +5082,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -5120,7 +5120,7 @@ GameObject:
   - component: {fileID: 1228899085}
   - component: {fileID: 1228899087}
   - component: {fileID: 1228899086}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5395,7 +5395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 42.7312}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1282279856
@@ -5818,7 +5818,7 @@ GameObject:
   - component: {fileID: 1423026529}
   - component: {fileID: 1423026528}
   - component: {fileID: 1423026531}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: OpenShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5995,7 +5995,7 @@ GameObject:
   - component: {fileID: 1437055199}
   - component: {fileID: 1437055198}
   - component: {fileID: 1437055201}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: BUY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6448,7 +6448,7 @@ GameObject:
   - component: {fileID: 1537305428}
   - component: {fileID: 1537305430}
   - component: {fileID: 1537305429}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6765,7 +6765,7 @@ GameObject:
   - component: {fileID: 1595580431}
   - component: {fileID: 1595580433}
   - component: {fileID: 1595580432}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6980,7 +6980,7 @@ GameObject:
   - component: {fileID: 1606988097}
   - component: {fileID: 1606988099}
   - component: {fileID: 1606988098}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Carrots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7137,7 +7137,7 @@ GameObject:
   - component: {fileID: 1623924175}
   - component: {fileID: 1623924177}
   - component: {fileID: 1623924176}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: PlayerScoresBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7944,7 +7944,7 @@ GameObject:
   - component: {fileID: 1738337483}
   - component: {fileID: 1738337485}
   - component: {fileID: 1738337484}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8194,7 +8194,7 @@ GameObject:
   - component: {fileID: 1768828704}
   - component: {fileID: 1768828706}
   - component: {fileID: 1768828705}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: OpenShopBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8270,7 +8270,7 @@ GameObject:
   - component: {fileID: 1784984019}
   - component: {fileID: 1784984021}
   - component: {fileID: 1784984020}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -18,10 +18,14 @@ public class PlayerTools : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
     }
 
+    [Header("UI")]
     [SerializeField] private GameObject playerToolsMenu;
     [SerializeField] private GameObject playerToolsTakePlantButton;
 
+    [Header("Values")]
     public PlaceComponent currentPickedPlace;
+    [SerializeField] private AnimationClip plantAnimation;
+    private float animationDuration;
 
     [Header("Particles")]
     [SerializeField] private GameObject plantParticle;
@@ -32,7 +36,6 @@ public class PlayerTools : MonoBehaviour
     {
         HidePlayerTools();
     }
-
     public void ShowPlayerTools()
     {
         playerToolsMenu.SetActive(true);
@@ -66,29 +69,33 @@ public class PlayerTools : MonoBehaviour
 
     public void DoPlant(PlantData data)
     {
+        currentPickedPlace.currentPlacePlant = data;
+        if (currentPickedPlace.currentPlacePlant == PlantsDataBase.Instance.carrot)
+        {
+            _itemsAnimationEvents.currentPlantingObject = _itemsAnimationEvents.plantCarrot;
+        }
+        else if (currentPickedPlace.currentPlacePlant == PlantsDataBase.Instance.grass)
+        {
+            _itemsAnimationEvents.currentPlantingObject = _itemsAnimationEvents.plantGrass;
+        }
+        else if (currentPickedPlace.currentPlacePlant == PlantsDataBase.Instance.tree)
+        {
+            _itemsAnimationEvents.currentPlantingObject = _itemsAnimationEvents.plantTree;
+        }
+        playerMovement.playerAnimator.SetBool("Plant",true);
+    }
+
+    public void Planting()
+    {
         if (currentPickedPlace != null)
         {
             if (!currentPickedPlace.isPlanted)
             {
-                playerMovement.playerAnimator.SetBool("Plant",true);
-                currentPickedPlace.currentPlacePlant = data;
-                var plant = Instantiate(data.plantObject, currentPickedPlace.transform.position, Quaternion.identity,currentPickedPlace.transform);
+                var plant = Instantiate(currentPickedPlace.currentPlacePlant.plantObject, currentPickedPlace.transform.position, Quaternion.identity,currentPickedPlace.transform);
                 currentPickedPlace.isPlanted = true;
                 currentPickedPlace.StartGrowing(plant);
                 currentPickedPlace.currentPlacedPlantObject = plant;
-                if (currentPickedPlace.currentPlacePlant == PlantsDataBase.Instance.carrot)
-                {
-                    _itemsAnimationEvents.currentPlantingObject = _itemsAnimationEvents.plantCarrot;
-                }
-                else if (currentPickedPlace.currentPlacePlant == PlantsDataBase.Instance.grass)
-                {
-                    _itemsAnimationEvents.currentPlantingObject = _itemsAnimationEvents.plantGrass;
-                }
-                else if (currentPickedPlace.currentPlacePlant == PlantsDataBase.Instance.tree)
-                {
-                    _itemsAnimationEvents.currentPlantingObject = _itemsAnimationEvents.plantTree;
-                }
-                PlantAnimation();
+                GrowParticle();
                 HidePlayerTools();
             }
         }
@@ -111,7 +118,7 @@ public class PlayerTools : MonoBehaviour
         Destroy(popupCarrot,1);
     }
 
-    private void PlantAnimation()
+    private void GrowParticle()
     {
         Instantiate(plantParticle, new Vector3(transform.position.x,1.5f,transform.position.z), Quaternion.identity);
     }

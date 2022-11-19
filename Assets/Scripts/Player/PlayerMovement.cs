@@ -11,6 +11,16 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove;
     public Vector3 currentClickedPoint;
 
+    public float animationDuration;
+    public AnimationClip plantClip;
+
+    public float GetCurrentAnimationDuration()
+    {
+        animationDuration = plantClip.length;
+
+        return animationDuration / 3;
+    }
+
     private void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();

@@ -73,7 +73,6 @@ public class Shop : MonoBehaviour
         {
             return;
         }
-        
     }
 
     public void UpdateCarrotsCount()

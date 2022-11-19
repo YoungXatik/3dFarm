@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -109,9 +110,20 @@ public class Outline : MonoBehaviour {
       materials.Add(outlineFillMaterial);
 
       renderer.materials = materials.ToArray();
+      SetOutlineWidth();
     }
   }
 
+  private Sequence Seq;
+  
+  private void SetOutlineWidth()
+  {
+    Seq = DOTween.Sequence();
+    Seq.Append(DOTween.To(x => outlineWidth = x, 2, 6, 0.5f)).SetEase(Ease.Linear);
+    Seq.Append(DOTween.To(x => outlineWidth = x, 6, 2, 0.5f)).SetEase(Ease.Linear);
+    Seq.SetLoops(-1, LoopType.Restart);
+  }
+  
   void OnValidate() {
 
     // Update material properties
@@ -132,9 +144,8 @@ public class Outline : MonoBehaviour {
   void Update() {
     if (needsUpdate) {
       needsUpdate = false;
-
-      UpdateMaterialProperties();
     }
+    UpdateMaterialProperties();
   }
 
   void OnDisable() {
@@ -147,6 +158,7 @@ public class Outline : MonoBehaviour {
       materials.Remove(outlineFillMaterial);
 
       renderer.materials = materials.ToArray();
+      Seq.Kill();
     }
   }
 

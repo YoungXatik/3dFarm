@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -17,11 +18,17 @@ public class PlayerScores : MonoBehaviour
     [SerializeField] private TextMeshProUGUI experienceText;
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private Animator scoresAnimator;
-    
+
+    private Tween tween;
+    private void Start()
+    {
+        moneyText.text = $"Money : {Mathf.RoundToInt(money)}$";
+    }
+
     public void AddExperience(float value)
     {
         scoresAnimator.SetBool("Start",true);
-        DOTween.To(x => experience = x, experience, experience + value, 1f)
+        DOTween.To(x => experience = x, experience, experience + value, 0.25f)
             .OnUpdate(() => experienceText.text = $"Experience : {Mathf.RoundToInt(experience)}").SetEase(Ease.Linear);
     }
 
@@ -40,8 +47,28 @@ public class PlayerScores : MonoBehaviour
 
     public void RemoveCarrot(int value)
     {
-        countOfCarrots -= 1;
-        DOTween.To(x => money = x, money, money + value, 1f).
-            OnUpdate(() => moneyText.text = $"Money : {Mathf.RoundToInt(money)}").SetEase(Ease.Linear);
+        if (tween == null)
+        {
+            countOfCarrots -= 1;
+            tween = DOTween.To(x => money = x, money, money + value, 0.25f)
+                .OnUpdate(() => moneyText.text = $"Money : {Mathf.RoundToInt(money)}$").SetEase(Ease.Linear);
+        }
+        else
+        {
+            if (tween.IsActive())
+            {
+                tween.Complete();
+                tween = null;
+                countOfCarrots -= 1;
+                tween = DOTween.To(x => money = x, money, money + value, 0.25f)
+                    .OnUpdate(() => moneyText.text = $"Money : {Mathf.RoundToInt(money)}$").SetEase(Ease.Linear);
+            }
+            else
+            {
+                countOfCarrots -= 1;
+                tween = DOTween.To(x => money = x, money, money + value, 0.25f)
+                    .OnUpdate(() => moneyText.text = $"Money : {Mathf.RoundToInt(money)}$").SetEase(Ease.Linear);
+            }
+        }
     }
 }

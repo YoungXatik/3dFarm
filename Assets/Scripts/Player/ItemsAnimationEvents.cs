@@ -24,7 +24,8 @@ public class ItemsAnimationEvents : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         _playerMovement = GetComponentInParent<PlayerMovement>();
     }
-
+    
+    
     public void AllowPlayerMove()
     {
         _playerMovement.canMove = true;
@@ -63,5 +64,10 @@ public class ItemsAnimationEvents : MonoBehaviour
     public void CancelPlanting()
     {
         playerAnimator.SetBool("Plant",false);
+    }
+
+    public void DoPlant()
+    {
+        PlayerTools.Instance.Planting();
     }
 }

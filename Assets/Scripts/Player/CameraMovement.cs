@@ -16,7 +16,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private Vector3 currentPlantCameraRotation;
     [SerializeField] private Vector3 offset;
 
-    public Transform playerObject;
+    [SerializeField] private  Transform playerObject;
+    [SerializeField] private Transform playerFaceToFacePoint;
 
     private void Awake()
     {
@@ -42,7 +43,7 @@ public class CameraMovement : MonoBehaviour
     {
         _camera.Follow = null;
         startCameraPosition = _camera.transform.position;
-        currentPlantCameraPosition = plantPosition + offset;
+        currentPlantCameraPosition = playerFaceToFacePoint.position;
         _camera.gameObject.transform.DOMove(currentPlantCameraPosition, timeToChangeCameraPosition).SetEase(Ease.Linear);
     }
 }

@@ -11,6 +11,9 @@ public class GroundController : MonoBehaviour
     [SerializeField] private GameObject groundObjectPrefab;
 
     [SerializeField] private GameObject leftSide,rightSide,downSide,topSide;
+
+    [SerializeField] private GameObject frontSide;
+    [SerializeField] private Vector3 frontSideOffset;
     
     [SerializeField] private int sizeX, sizeY;
     [SerializeField] private float delay;
@@ -54,5 +57,7 @@ public class GroundController : MonoBehaviour
             var cloneDownSide = Instantiate(downSide, gameObject.transform);
             cloneDownSide.transform.position = new Vector3(-10 + i,0,0);
         }
+        
+        frontSide.transform.position = new Vector3(frontSideOffset.x,frontSideOffset.y,sizeY);
     }
 }

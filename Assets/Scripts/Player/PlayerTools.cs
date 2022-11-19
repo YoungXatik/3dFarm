@@ -69,6 +69,7 @@ public class PlayerTools : MonoBehaviour
 
     public void DoPlant(PlantData data)
     {
+        playerToolsMenu.SetActive(false);
         currentPickedPlace.currentPlacePlant = data;
         if (currentPickedPlace.currentPlacePlant == PlantsDataBase.Instance.carrot)
         {
